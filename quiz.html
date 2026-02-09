@@ -1,0 +1,52 @@
+<div class="card">
+  <h2>📝 Quiz</h2>
+  <div id="quiz"></div>
+  <a class="link" href="analysis.html">📊 View Analysis</a>
+</div>
+
+<script>
+const topic = localStorage.getItem("topic") || "Machine Learning";
+const API = "http://127.0.0.1:8000";
+
+fetch(`${API}/quiz`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ topic })
+})
+.then(res => res.json())
+.then(data => {
+  const quizDiv = document.getElementById("quiz");
+  quizDiv.innerHTML = "";
+
+  data.questions.forEach((q, i) => {
+    const block = document.createElement("div");
+    block.className = "quiz-question";
+
+    block.innerHTML = `
+      <b>${i+1}. ${q.question}</b>
+      <div class="quiz-options">
+        ${q.options.map(opt => `
+          <label>
+            <input type="radio" name="q${i}"
+              onclick="checkAnswer(this,'${q.answer}')">
+            ${opt}
+          </label>
+        `).join("")}
+      </div>
+      <div class="feedback"></div>
+    `;
+    quizDiv.appendChild(block);
+  });
+});
+
+function checkAnswer(input, correct) {
+  const feedback = input.closest(".quiz-question").querySelector(".feedback");
+  if (input.value === correct || input.nextSibling.textContent.trim() === correct) {
+    feedback.textContent = "✅ Correct answer";
+    feedback.className = "feedback correct";
+  } else {
+    feedback.textContent = "❌ Wrong answer";
+    feedback.className = "feedback wrong";
+  }
+}
+</script>
