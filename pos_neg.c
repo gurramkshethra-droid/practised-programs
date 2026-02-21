@@ -2,25 +2,24 @@
 
 int main() {
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
     int n;
-    scanf("%d",&n);
-    int a[n];
-    for(int i=0;i<n;i++) {
-        scanf("%d",&a[i]);
-    }  
-    int nz=0,np=0,nn=0;
-    for(int i=0;i<n;i++) {
-        if(a[i]==0) {
-            nz++;
-        }
-        else if(a[i]>0) {
-            np++;
-        }
-        else {
-            nn++;
-        }
+    scanf("%d", &n);
+
+    int zeros = 0, positives = 0, negatives = 0;
+    int x;
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &x);
+
+        if (x == 0)
+            zeros++;
+        else if (x > 0)
+            positives++;
+        else
+            negatives++;
     }
-    printf("%d %d %d",nz,np,nn);
+
+    printf("%d %d %d\n", zeros, positives, negatives);
+
     return 0;
 }
