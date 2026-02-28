@@ -2,17 +2,18 @@
 
 int main() {
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
-    int MAX=100; 
-    int a[MAX];
-    int total=(100*101)/2;
-    int sum=0;
-    for(int i=0;i<99;i++) {
-        scanf("%d",&a[i]);
-        sum+=a[i];
+    int n;
+    scanf("%d", &n);  // total count
+
+    int total = (n * (n + 1)) / 2;
+    int sum = 0, x;
+
+    for(int i = 0; i < n - 1; i++) {
+        scanf("%d", &x);
+        sum += x;
     }
-    if(sum!=total) {
-        printf("%d",total-sum);
-    }
+
+    printf("%d", total - sum);
+
     return 0;
 }
