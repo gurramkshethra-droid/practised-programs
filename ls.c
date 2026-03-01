@@ -2,24 +2,27 @@
 
 int main() {
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
-    int search,n;
-    scanf("%d",&n);
-    scanf("%d",&search);
-    int a[100];
-    for(int i=0;i<n;i++) {
-        scanf("%d",&a[i]);
+    int n, search;
+    scanf("%d", &n);
+
+    int a[100];   // declare after knowing n
+
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
     }
-    int found=0;
-    for(int i=0;i<n;i++) {
-        if(search==a[i]) {
-            printf("%d",i);
-            found=1;
+
+    scanf("%d", &search);
+
+    int found = -1;   // assume not found
+
+    for(int i = 0; i < n; i++) {
+        if(a[i] == search) {
+            found = i;
             break;
         }
     }
-    if(found==0) {
-        printf("-1");
-    }
+
+    printf("%d", found);
+
     return 0;
 }
