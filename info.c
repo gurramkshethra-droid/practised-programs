@@ -1,35 +1,41 @@
 #include <stdio.h>
+#include <ctype.h>   // for tolower()
+#include <string.h>  // for strlen()
 
 int main() {
+
     int n;
     scanf("%d", &n);
 
-    char a[100];
+    while(n--) {
 
-    for (int i = 0; i < n; i++) {
         int k;
         scanf("%d", &k);
 
-        scanf("%s", a);   // read the string
+        char a[1000];
+        scanf("%s", a);
 
         int freq[26] = {0};
 
-        // convert uppercase to lowercase
-        for (int j = 0; j < k; j++) {
-            if (a[j] >= 'A' && a[j] <= 'Z') {
-                a[j] = a[j] + 32;
+        int len = strlen(a);   // safer than trusting k
+
+        for(int i = 0; i < len; i++) {
+            char ch = tolower(a[i]);
+
+            if(ch >= 'a' && ch <= 'z') {   // ensure valid letter
+                freq[ch - 'a']++;
             }
-            freq[a[j] - 'a']++;
         }
 
         int max1 = 0, max2 = 0;
 
-        for (int j = 0; j < 26; j++) {
-            if (freq[j] > max1) {
+        for(int i = 0; i < 26; i++) {
+            if(freq[i] > max1) {
                 max2 = max1;
-                max1 = freq[j];
-            } else if (freq[j] > max2) {
-                max2 = freq[j];
+                max1 = freq[i];
+            }
+            else if(freq[i] > max2) {
+                max2 = freq[i];
             }
         }
 
@@ -38,4 +44,3 @@ int main() {
 
     return 0;
 }
-
