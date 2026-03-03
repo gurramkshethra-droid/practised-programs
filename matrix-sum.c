@@ -20,7 +20,7 @@ int main() {
         for(int i = 0; i < n; i++) {
             sum += a[i][j];
         }
-        printf("%d\n", sum);
+        printf("%d\n", sum);//sum printed
     }
 
     return 0;
