@@ -23,7 +23,7 @@ int main() {
                 a[j + 1] = temp;
                 swapped = 1;
             }
-        }
+        }//swapped
 
         // Print array after each pass
         for(int k = 0; k < n; k++) {
