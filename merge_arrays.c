@@ -27,7 +27,7 @@ int main() {
     }
 
     while (i < n)
-        printf("%d ", a[i++]);
+        printf("%d ", a[i++]);//merging of arrayy
 
     while (j < m)
         printf("%d ", b[j++]);
