@@ -18,6 +18,6 @@ int main() {
             osum+=a[i];
         }
     }
-    printf("%d %d",osum,esum);
+    printf("%d %d",osum,esum);//prints both sums
     return 0;
 }
