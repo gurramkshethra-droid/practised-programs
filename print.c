@@ -17,7 +17,7 @@ int main() {
         scanf("%d", &index);
 
         if(index >= 0 && index < n) {
-            printf("%d", a[index]);
+            printf("%d", a[index]);//prints the array
         } else {
             printf("-1");
         }
