@@ -30,7 +30,7 @@ int main() {
         printf("%d ", a[i++]);//merging of arrayy
 
     while (j < m)
-        printf("%d ", b[j++]);
+        printf("%d ", b[j++]);//merging of array
 
     printf("\n");
 
