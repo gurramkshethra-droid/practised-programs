@@ -13,7 +13,7 @@ int main() {
     max=a[0];
     for(int i=1;i<n;i++) {
         if(a[i]>max) {
-            max=a[i];
+            max=a[i];//storing max value
         }
     }
     printf("%d",max);
