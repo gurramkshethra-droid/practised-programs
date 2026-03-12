@@ -2,14 +2,12 @@
 
 #define HASH_SIZE 1000
 
-// Linked list node
 struct Node {
     int key;
     int index;
     struct Node* next;
 };
 
-// hash table
 struct Node* hashTable[HASH_SIZE];
 
 int hash(int key) {
@@ -17,7 +15,6 @@ int hash(int key) {
     return key % HASH_SIZE;
 }
 
-// insert into hash table
 void insert(int key, int index) {
     int h = hash(key);
 
@@ -29,7 +26,6 @@ void insert(int key, int index) {
     hashTable[h] = newNode;
 }
 
-// search in hash table
 struct Node* search(int key) {
     int h = hash(key);
     struct Node* temp = hashTable[h];
@@ -45,7 +41,6 @@ struct Node* search(int key) {
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 
-    // initialize hash table
     for (int i = 0; i < HASH_SIZE; i++)
         hashTable[i] = NULL;
 
