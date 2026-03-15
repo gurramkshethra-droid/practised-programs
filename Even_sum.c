@@ -16,7 +16,7 @@ int main() {
 	        sum+=a[j];
 	    }
 	    if(sum%2==0) {
-	        printf("Yes");
+	        printf("Yes");//prints even sum
 	    }
 	    else {
 	        printf("No");
