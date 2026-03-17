@@ -12,7 +12,7 @@ public class ArticulationPoint {
         int children = 0;
 
         for(int v=0; v<n; v++){
-            if(graph[u][v] == 1){//checks for adjacency
+            if(graph[u][v] == 1){
 
                 if(!visited[v]){
                     children++;
