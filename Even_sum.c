@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main() {
-	// your code goes here
+int main() {\
 	int n;
 	scanf("%d",&n);
 	for(int i=0;i<n;i++) {
@@ -16,7 +15,7 @@ int main() {
 	        sum+=a[j];
 	    }
 	    if(sum%2==0) {
-	        printf("Yes");//prints even sum
+	        printf("Yes");
 	    }
 	    else {
 	        printf("No");
