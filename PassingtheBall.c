@@ -11,8 +11,7 @@ int main() {
         scanf("%d", &n);
         scanf("%s", s);
 
-        int count = 1; // student 1
-
+        int count = 1; 
         for(int i = 0; i < n; i++) {
             if(s[i] == 'R')
                 count++;
