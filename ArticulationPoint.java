@@ -21,7 +21,7 @@ public class ArticulationPoint {
 
                     low[u] = Math.min(low[u], low[v]);
 
-                    if(parent[u] == -1 && children > 1)
+                    if(parent[u] == -1 && children > 1)//checks condition
                         System.out.println("Articulation Point: " + u);
 
                     if(parent[u] != -1 && low[v] >= disc[u])
