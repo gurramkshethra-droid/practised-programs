@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Mergesort {
     public static void merge(int a[],int left,int right) {
         if(left<right) {
-            int mid=left+(right-left)/2;
+            int mid=left+(right-left)/2;//aooroach by divide and conquer
             merge(a,left,mid);
             merge(a,mid+1,right);
             mergesorts(a,left,mid,right);
