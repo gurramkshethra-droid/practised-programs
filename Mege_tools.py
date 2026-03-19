@@ -6,7 +6,7 @@ def merge_the_tools(string, k):
     for i in range(t):
         substr=""
         for ch in string[i*k:(i+1)*k]:
-            if ch not in substr:
+            if ch not in substr:#adds distinct elements
                 substr+=ch
         print(substr)
 
