@@ -16,7 +16,7 @@ continue;
 int count=1;
 for(int j=i+1; j<words.length; j++)
 {
-if(word.equals(words[j]))
+if(word.equals(words[j]))//checks coount
 {
 count++;
 words[j]="";
