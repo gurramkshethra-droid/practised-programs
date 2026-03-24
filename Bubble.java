@@ -1,5 +1,6 @@
+import java.io.*;
 import java.util.*;
-
+import java.util.Scanner;
 public class Bubble {
 
     public static void main(String[] args) {
