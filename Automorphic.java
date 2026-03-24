@@ -5,8 +5,8 @@ public class Automorphic {
 
     public static void main(String[] args) {
         int n;
-        Scanner s=new Scanner(System.in);
-        n=s.nextInt();
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
         int sq=n*n;
         int t=sq,r,rem;
         int temp=n,flag=1;
