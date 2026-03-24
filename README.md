@@ -88,10 +88,6 @@ It includes basic to intermediate problems that help improve problem-solving ski
 * Optimize existing solutions
 * Add comments for better understanding
 
----
 
-## 🙌 Author
-
-**Deekshith Oruganti**
 
 ---
