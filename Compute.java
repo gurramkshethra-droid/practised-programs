@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Compute {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Main. */
         Scanner s=new Scanner(System.in);
         long a,b;
         long mul=1;
