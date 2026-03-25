@@ -1,15 +1,15 @@
+import java.io.*;
 import java.util.*;
-
+import java.util.Scanner;
 public class Bubble {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Main. */
         int n;
-        Scanner s=new Scanner(System.in);
-        n=s.nextInt();
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
         int a[]=new int[n];
         for(int i=0;i<n;i++) {
-            a[i]=s.nextInt();
+            a[i]=sc.nextInt();
         }
         int temp;
         for(int i=0;i<n-1;i++) {

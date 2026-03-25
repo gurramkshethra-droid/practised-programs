@@ -1,15 +1,14 @@
 import java.io.*;
 import java.util.*;
-
+import java.util.Scanner;
 public class Compute {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Main. */
-        Scanner s=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         long a,b;
         long mul=1;
-        a=s.nextInt();
-        b=s.nextLong();
+        a=sc.nextInt();
+        b=sc.nextLong();
         if(b==0) {
             System.out.println(1);
             return;
