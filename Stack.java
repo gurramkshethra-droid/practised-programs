@@ -11,12 +11,9 @@ public class Main {
 
             for (int i = 0; i < s.length(); i++) {
                 char ch = s.charAt(i);
-
-                // push opening brackets
                 if (ch == '(' || ch == '{' || ch == '[') {
                     stack.push(ch);
                 } 
-                // handle closing brackets
                 else {
                     if (stack.isEmpty()) {
                         isBalanced = false;
@@ -33,8 +30,6 @@ public class Main {
                     }
                 }
             }
-
-            // if stack not empty → unbalanced
             if (!stack.isEmpty()) {
                 isBalanced = false;
             }
