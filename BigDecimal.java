@@ -10,15 +10,11 @@ public class Main {
         for (int i = 0; i < n; i++) {
             s[i] = sc.next();
         }
-
-        // Sort using custom comparator
         Arrays.sort(s, new Comparator<String>() {
             @Override
             public int compare(String a, String b) {
                 BigDecimal bd1 = new BigDecimal(a);
                 BigDecimal bd2 = new BigDecimal(b);
-                
-                // descending order
                 return bd2.compareTo(bd1);
             }
         });
