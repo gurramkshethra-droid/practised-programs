@@ -19,7 +19,6 @@ public class Main {
             }
         });
 
-        // Print result
         for (String val : s) {
             System.out.println(val);
         }
