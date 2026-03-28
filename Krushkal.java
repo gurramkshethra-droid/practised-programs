@@ -1,5 +1,6 @@
+import java.io.*;
 import java.util.*;
-
+import java.util.Scanner;
 class Kruskal {
 
     static int parent[];
@@ -9,7 +10,6 @@ class Kruskal {
             i = parent[i];
         return i;
     }
-    //makes parent to each other
     static void union(int i, int j){
         int a = find(i);
         int b = find(j);
