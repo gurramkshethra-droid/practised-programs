@@ -1,7 +1,8 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
 public class Main {
     public static boolean isPalindrome(int x) {
-        
-        // Negative numbers are not palindrome
         if (x < 0) return false;
 
         int original = x;
