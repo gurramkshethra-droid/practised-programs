@@ -1,3 +1,6 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
 class Solution {
     public int maxArea(int[] height) {
         int left = 0;
