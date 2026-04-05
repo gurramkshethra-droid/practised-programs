@@ -13,7 +13,6 @@ class Solution {
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
 
-                // Update closest sum
                 if (Math.abs(target - sum) < Math.abs(target - closestSum)) {
                     closestSum = sum;
                 }
@@ -23,7 +22,7 @@ class Solution {
                 } else if (sum > target) {
                     right--;
                 } else {
-                    return sum; // exact match
+                    return sum; 
                 }
             }
         }
