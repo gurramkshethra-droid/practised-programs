@@ -9,16 +9,16 @@ class Solution {
         }
 
         String[] map = {
-            "",     // 0
-            "",     // 1
-            "abc",  // 2
-            "def",  // 3
-            "ghi",  // 4
-            "jkl",  // 5
-            "mno",  // 6
-            "pqrs", // 7
-            "tuv",  // 8
-            "wxyz"  // 9
+            "",    
+            "",     
+            "abc",  
+            "def",  
+            "ghi",  
+            "jkl",  
+            "mno",  
+            "pqrs", 
+            "tuv",  
+            "wxyz"  
         };
 
         backtrack(result, digits, map, 0, "");
@@ -26,7 +26,6 @@ class Solution {
     }
 
     private void backtrack(List<String> result, String digits, String[] map, int index, String current) {
-        // Base case
         if (index == digits.length()) {
             result.add(current);
             return;
