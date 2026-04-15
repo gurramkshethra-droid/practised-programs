@@ -11,7 +11,6 @@ class Solution {
     private void backtrack(int[] candidates, int target, int start, 
                            List<Integer> current, List<List<Integer>> result) {
 
-        // Base case
         if (target == 0) {
             result.add(new ArrayList<>(current));
             return;
@@ -19,16 +18,12 @@ class Solution {
 
         for (int i = start; i < candidates.length; i++) {
 
-            // Skip if number exceeds target
             if (candidates[i] > target) continue;
 
-            // Choose
             current.add(candidates[i]);
 
-            // Stay on same index (i) → reuse allowed
             backtrack(candidates, target - candidates[i], i, current, result);
 
-            // Backtrack
             current.remove(current.size() - 1);
         }
     }
