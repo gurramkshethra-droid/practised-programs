@@ -8,8 +8,6 @@ public class SearchRotatedArray {
 
             if (nums[mid] == target)
                 return mid;
-
-            // Left half is sorted
             if (nums[low] <= nums[mid]) {
                 if (target >= nums[low] && target < nums[mid]) {
                     high = mid - 1;
@@ -17,7 +15,6 @@ public class SearchRotatedArray {
                     low = mid + 1;
                 }
             }
-            // Right half is sorted
             else {
                 if (target > nums[mid] && target <= nums[high]) {
                     low = mid + 1;
@@ -40,8 +37,8 @@ public class SearchRotatedArray {
         int[] nums3 = {1};
         int target3 = 0;
 
-        System.out.println(search(nums1, target1)); // 4
-        System.out.println(search(nums2, target2)); // -1
-        System.out.println(search(nums3, target3)); // -1
+        System.out.println(search(nums1, target1)); 
+        System.out.println(search(nums2, target2));
+        System.out.println(search(nums3, target3)); 
     }
 }
