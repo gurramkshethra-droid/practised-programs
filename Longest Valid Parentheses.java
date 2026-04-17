@@ -4,7 +4,7 @@ public class LongestValidParentheses {
 
     public static int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
-        stack.push(-1); // base index
+        stack.push(-1); 
 
         int maxLength = 0;
 
@@ -33,8 +33,8 @@ public class LongestValidParentheses {
         String s2 = ")()())";
         String s3 = "";
 
-        System.out.println(longestValidParentheses(s1)); // 2
-        System.out.println(longestValidParentheses(s2)); // 4
-        System.out.println(longestValidParentheses(s3)); // 0
+        System.out.println(longestValidParentheses(s1)); 
+        System.out.println(longestValidParentheses(s2)); 
+        System.out.println(longestValidParentheses(s3)); 
     }
 }
