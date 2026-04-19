@@ -1,4 +1,6 @@
-
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
 public class MatrixChainMultiplication {
 
     public static int matrixChainOrder(int[] p, int n) {
