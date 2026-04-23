@@ -14,13 +14,11 @@ public class SubstringWithConcatenation {
         int wordCount = words.length;
         int totalLen = wordLen * wordCount;
 
-        // Frequency map of words
         Map<String, Integer> wordMap = new HashMap<>();
         for (String word : words) {
             wordMap.put(word, wordMap.getOrDefault(word, 0) + 1);
         }
 
-        // Try different starting offsets
         for (int i = 0; i < wordLen; i++) {
 
             int left = i;
@@ -36,7 +34,6 @@ public class SubstringWithConcatenation {
                     windowMap.put(word, windowMap.getOrDefault(word, 0) + 1);
                     count++;
 
-                    // If word frequency exceeds, shrink window
                     while (windowMap.get(word) > wordMap.get(word)) {
                         String leftWord = s.substring(left, left + wordLen);
                         windowMap.put(leftWord, windowMap.get(leftWord) - 1);
@@ -44,13 +41,11 @@ public class SubstringWithConcatenation {
                         count--;
                     }
 
-                    // Valid window found
                     if (count == wordCount) {
                         result.add(left);
                     }
 
                 } else {
-                    // Reset window
                     windowMap.clear();
                     count = 0;
                     left = right + wordLen;
