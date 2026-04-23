@@ -6,8 +6,6 @@ struct Node {
     int data;
     struct Node* next;
 };
-
-// function to check if value exists in linked list
 int exists(struct Node* head, int val) {
     struct Node* temp = head;
     
