@@ -30,7 +30,7 @@ public class DivideTwoIntegers {
     }
 
     public static void main(String[] args) {
-        System.out.println(divide(10, 3));   // Output: 3
-        System.out.println(divide(7, -3));   // Output: -2
+        System.out.println(divide(10, 3));  
+        System.out.println(divide(7, -3));   
     }
 }
