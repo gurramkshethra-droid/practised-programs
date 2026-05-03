@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.util.Scanner;
 public class Main {
-
+//function goes
     public static void main(String[] args) {
         int m,n,i,j;
         Scanner sc= new Scanner(System.in);
